@@ -18,6 +18,11 @@ Users can withdraw their tokens and the rewards they have accumulated at anytime
 
 Rewards are calculated on withdraw, however the staking contract will need to account for end time. Users should not receive additional rewards past the end time.
 
+Claim
+-------
+Inside the withdraw function, or possibly a separate function, the user should be able to simply claim their staking rewards without removing their initial deposit. By claiming rewards this also resets the date they deposited tokens and their longevity reward bonus will be reset.
+
+
 ERC-20 Mintable Reward Token
 -------
 A standard ERC-20 token based on [OpenZeppelin 4.x ERC-20](https://docs.openzeppelin.com/contracts/2.x/erc20) with the [ERC20Mintable](https://docs.openzeppelin.com/contracts/2.x/api/token/erc20#ERC20Mintable) extension will need to be created that will allow the staking contract to mint rewards. 
